@@ -1,0 +1,22 @@
+# Virtual Environments
+.venv/
+venv/
+ENV/
+
+# Large Datasets & Reference Databases
+data/
+references/
+dnabarcoder/
+
+
+# Python / R Runtime Files
+__pycache__/
+*.pyc
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# System / OS Files
+.DS_Store
+Thumbs.db

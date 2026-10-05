@@ -1,0 +1,6 @@
+sample	forward_ok	reverse_ok	forward_reads	reverse_reads	status	reason
+SRR23641999	TRUE	TRUE	125427	125427	KEEP	Both mates valid
+SRR23642002	TRUE	TRUE	102397	102397	KEEP	Both mates valid
+SRR23642014	TRUE	TRUE	109654	109654	KEEP	Both mates valid
+SRR23642023	TRUE	TRUE	129772	129772	KEEP	Both mates valid
+SRR23642026	TRUE	TRUE	135603	135603	KEEP	Both mates valid
