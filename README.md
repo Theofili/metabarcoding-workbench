@@ -4,6 +4,18 @@ A complete, end-to-end bioinformatics pipeline for fungal ITS metabarcoding anal
 
 ------------------------------------------------------------------------
 
+### Repository Setup & Cloning
+
+To get started with the pipeline on your local machine, clone the repository and navigate into the project directory:
+
+```powershell
+# Clone the repository
+git clone [https://github.com/Theofili/metabarcoding-workbench.git](https://github.com/Theofili/metabarcoding-workbench.git)
+
+# Navigate into the project folder
+cd metabarcoding-workbench
+```
+
 ## Workflow Overview & Pipeline Execution
 
 ### Environment Setup & Tool Verification
