@@ -36,9 +36,7 @@ Query the European Nucleotide Archive (ENA) for BioProjcet `e.g PRJNA934949` and
 python scripts/01_download.py PRJNA934949 --limit 5
 ```
 
-- Output: FASTQ files stored in `data/fastq/` and download manifest saved to `results/`
-
-- 
+- **Output:** FASTQ files stored in `data/fastq/` and download manifest saved to `results/s`
 
   ### Step 2: Quality Filtering & Denoising (DADA2)
 
@@ -48,7 +46,7 @@ Run DADA2 to assess read intergrity, filter low-quality sequences, learn error r
 Rscript scripts/02_dada2.R
 ```
 
-- Outputs:
+- **Outputs:**
 
   - `results/seqtab_nochim.rds` & `results/asv_table.tsv` (ASV abundance matrix)
 
@@ -64,7 +62,7 @@ Performs BLAST searches of ASVs against the UNITE 2025 ITS database and assign t
 python scripts/03_taxonomy.py
 ```
 
-- Outputs: `results/dnabarcoder/asvs.unite2025ITS2_BLAST.classified`
+- **Outputs:** `results/dnabarcoder/asvs.unite2025ITS2_BLAST.classified`
 
 ### Step 4: Downstram Visualization & Analysis
 
@@ -75,7 +73,7 @@ Parse classification output to summarize taxonomic composition, compute relative
 Rscript scripts/04a_visualization.R --region its2 --rank genus
 ```
 
-- Outputs:
+- **Outputs:**
 
   - Abundance bar plots & PCoA plots in `results/plots/`
 
@@ -99,3 +97,17 @@ metabarcoding-workbench/
 ├── .gitignore          # Excludes raw data, virtualenv, and temp files
 └── requirements.txt    # Python dependencies
 ```
+
+## Output Visualizations
+
+### 1. Relative Abundance
+
+![Relative Abundance](results/plots/genus_relative_abundance.png)
+
+### 2. Total Abundance
+
+![Total Abundance](results/plots/genus_total_abundance.png)
+
+### 3. Bray-Curtis PCoA Clustering
+
+![Bray-Curtis PCoA](results/plots/bray_curtis_pcoa_clustered.png)
