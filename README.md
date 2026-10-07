@@ -10,7 +10,7 @@ To get started with the pipeline on your local machine, clone the repository and
 
 ```powershell
 # Clone the repository
-git clone [https://github.com/Theofili/metabarcoding-workbench.git](https://github.com/Theofili/metabarcoding-workbench.git)
+git clone https://github.com/Theofili/metabarcoding-workbench.git
 
 # Navigate into the project folder
 cd metabarcoding-workbench
@@ -20,7 +20,7 @@ cd metabarcoding-workbench
 
 ### Environment Setup & Tool Verification
 
-Before running the analysis, initialize the virtual environment and ensure all Python, R, and BLAST dependencies are properly linked and recognized:
+Before running the analysis, initialize the virtual environment and ensure all **Python**, **R**, and **BLAST** dependencies are properly linked and recognized:
 
 ``` powershell
 # Set execution policy and activate the virtual environment
@@ -81,8 +81,8 @@ python scripts/03_taxonomy.py
 Parse classification output to summarize taxonomic composition, compute relative abundances, and generate Bray-Curtis PCoA community ordination plots across different taxonomic ranks:
 
 ``` powershell
-# Analyze Family rank for ITS2 region
-Rscript scripts/04a_visualization.R --region its2 --rank genus
+# Analyze Genus rank for ITS2 region
+Rscript scripts/04_visualization.R --region its2 --rank genus
 ```
 
 - **Outputs:**
