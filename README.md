@@ -8,7 +8,7 @@ A complete, end-to-end bioinformatics pipeline for fungal ITS metabarcoding anal
 
 To get started with the pipeline on your local machine, clone the repository and navigate into the project directory:
 
-```powershell
+``` powershell
 # Clone the repository
 git clone https://github.com/Theofili/metabarcoding-workbench.git
 
@@ -40,19 +40,22 @@ python scripts/00_check_setup.py
 Rscript -e "library(ggplot2); library(vegan); library(dada2); library(ShortRead); cat('All required R packages loaded successfully.\n')"
 ```
 
+#### ! Navigate to `00_setup.md` for further explanation about the environment setup, as well as, instructions on how to download **references !**
+
 ### Step 1: Downloading Raw FastQ Data
 
 Query the European Nucleotide Archive (ENA) for BioProjcet `e.g PRJNA934949` and download raw paired-end FASTQ reads (limited to 5 test samples):
 
 ``` powershell
+# Download only the first 5 samples from this BioProject
 python scripts/01_download.py PRJNA934949 --limit 5
 ```
 
 - **Output:** FASTQ files stored in `data/fastq/` and download manifest saved to `results/s`
 
-  ### Step 2: Quality Filtering & Denoising (DADA2)
+### Step 2: Quality Filtering & Denoising (DADA2)
 
-Run DADA2 to assess read intergrity, filter low-quality sequences, learn error rates, merge forward/reverse pairs, remove chimeras, and generate Amplicon Sequence Variants (ASVs):
+Run DADA2 to assess read integrity, filter low-quality sequences, learn error rates, merge forward/reverse pairs, remove chimeras, and generate Amplicon Sequence Variants (ASVs):
 
 ``` powershell
 Rscript scripts/02_dada2.R
