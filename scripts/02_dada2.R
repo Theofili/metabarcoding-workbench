@@ -261,14 +261,14 @@ cat("\nLearning forward error rates without quality scores...\n")
 errF <- learnErrors(
   filtFs,
   errorEstimationFunction = noqualErrfun,
-  multithread = FALSE
+  multithread = TRUE
 )
 
 cat("\nLearning reverse error rates without quality scores...\n")
 errR <- learnErrors(
   filtRs,
   errorEstimationFunction = noqualErrfun,
-  multithread = FALSE
+  multithread = TRUE
 )
 
 # ------------------------------------------------------------
@@ -276,10 +276,10 @@ errR <- learnErrors(
 # ------------------------------------------------------------
 
 cat("\nDenoising forward reads...\n")
-dadaFs <- dada(filtFs, err = errF, multithread = FALSE)
+dadaFs <- dada(filtFs, err = errF, multithread = TRUE)
 
 cat("\nDenoising reverse reads...\n")
-dadaRs <- dada(filtRs, err = errR, multithread = FALSE)
+dadaRs <- dada(filtRs, err = errR, multithread = TRUE)
 
 # ------------------------------------------------------------
 # 7. Merge paired reads
