@@ -117,12 +117,12 @@ metabarcoding-workbench/
 
 ### 1. Relative Abundance
 
-![Relative Abundance](results/plots/genus_relative_abundance.png)
+![Relative Abundance](results/plots/genus_relative_abundance_its2.png)
 
 ### 2. Total Abundance
 
-![Total Abundance](results/plots/genus_total_abundance.png)
+![Total Abundance](results/plots/genus_total_abundance_its2.png)
 
 ### 3. Bray-Curtis PCoA Clustering
 
-![Bray-Curtis PCoA](results/plots/bray_curtis_pcoa_clustered.png)
+![Bray-Curtis PCoA](results/plots/bray_curtis_pcoa_genus_its2.png)
